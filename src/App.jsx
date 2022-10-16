@@ -9,11 +9,10 @@ function App() {
 
   const [descricao, setDescricao] = useState('')
   const [atividades, setAtividades] = useState([{
-    id:1,
+    id:0,
     descricao:'teste'
   }])
   const [modo, setModo] = useState('normal')
-
   const ehModoNoturno = modo === 'noturno'
 
   const adicionarAtividade = () => {
