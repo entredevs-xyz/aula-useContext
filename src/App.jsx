@@ -55,7 +55,7 @@ function App() {
       <AppInput
         ehModoNoturno={ehModoNoturno}
         value={descricao}
-        onChange={(event) => setDescricao(event.target.value)}
+        onChange={(event) => setDescricao(event.target.value ?? '')}
         type="text" />
       <AppButton 
           ehModoNoturno={ehModoNoturno}

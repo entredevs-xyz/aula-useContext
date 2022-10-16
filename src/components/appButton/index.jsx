@@ -3,7 +3,7 @@ import './style.css';
 
 const AppButton = (props) => {
 
-    const { ehModoNoturno, outrasPropriedades } = props
+    const { ehModoNoturno, ...outrasPropriedades } = props
 
     return <button className={`appButton ${ehModoNoturno && 'appButtonNoturno'}`} {...outrasPropriedades}/>
 
