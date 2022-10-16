@@ -1,0 +1,22 @@
+
+
+.appButton{
+
+    min-width: 150px;
+    min-height: 40px;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    background-color: green;
+    border: 1px solid darkgreen;
+    border-bottom: 4px solid darkgreen;
+    border-right: 4px solid darkgreen;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.appButton:active{
+    border-bottom: 1px solid darkgreen;
+    border-right: 1px solid darkgreen;
+}

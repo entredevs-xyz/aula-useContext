@@ -1,0 +1,41 @@
+
+
+.appCard{
+    position: relative;
+    border: 1px solid darkgreen;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px -1px darkgreen;
+    min-width: 200px;
+    background-color: #e7f3e7;
+    color: #070026;
+}
+
+.appCardTitle{
+    margin-top: 20px;
+}
+
+.appCardContainer{
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+.appCardClose{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-weight: 800;
+    background-color: #ed6b6b;
+    border: 1px solid #813b3b;
+    border-bottom: 2px solid #813b3b;
+    border-right: 2px solid #813b3b;
+    color: whitesmoke;
+    border-radius: 3px;
+
+}
+
+.appCardClose:active{
+    border-bottom: 1px solid darkred;
+    border-right: 1px solid darkred;
+}
