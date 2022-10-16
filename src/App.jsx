@@ -43,7 +43,7 @@ function App() {
       <button
         onClick={trocarModo}
         className='modoNoturno'>
-        {modo === 'normal' ? '☀️' : '🌙'}
+        {modo === 'normal' ? '🌞' : '🌛'}
       </button>
 
       <label htmlFor="descricao">Descrição:</label>
