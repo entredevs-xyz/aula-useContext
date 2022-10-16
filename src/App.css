@@ -25,7 +25,11 @@
     color: whitesmoke;
     gap:10px;
     background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,121,85,1) 100%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgb(0 151 102) 100%, rgba(0,212,255,1) 100%);
+}
+
+.appContainerNoturno{
+    background: rgb(3 2 30);
 }
 
 .cardContainer{
@@ -35,5 +39,13 @@
     flex-wrap:wrap;
     padding: 10px;
     justify-content: center;
+}
+
+.appContainerNoturno h1{
+    color: rgb(109, 109, 109);
+}
+
+.appContainerNoturno label{
+    color: rgb(109, 109, 109);
 }
 

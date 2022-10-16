@@ -3,7 +3,9 @@ import './style.css';
 
 const AppInput = (props) => {
 
-    return <input className='appInput' {...props}/>
+    const { ehModoNoturno } = props
+
+    return <input className={`appInput ${ehModoNoturno && 'appInputNoturno'}`} {...props}/>
 }
 
 

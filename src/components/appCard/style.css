@@ -39,3 +39,28 @@
     border-bottom: 1px solid darkred;
     border-right: 1px solid darkred;
 }
+
+
+.appCardNoturno{
+    color: rgb(158, 158, 158);
+    background-color: rgb(0 36 0);
+    border: 1px solid rgb(0, 17, 0);
+    box-shadow: 1px 1px 4px -1px rgb(0, 17, 0);
+
+   
+
+}
+
+.appCardNoturno .appCardClose{
+    background-color: #402020;
+    border: 1px solid #361a1a;
+    border-bottom: 2px solid #361a1a;
+    border-right: 2px solid #361a1a;
+}
+
+.appCardNoturno .appCardClose:active{
+    border-bottom: 1px solid #361a1a;
+    border-right: 1px solid #361a1a;
+}
+
+

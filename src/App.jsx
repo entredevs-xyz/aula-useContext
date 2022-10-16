@@ -8,10 +8,16 @@ import './App.css'
 function App() {
 
   const [descricao, setDescricao] = useState('')
-  const [atividades, setAtividades] = useState([])
+  const [atividades, setAtividades] = useState([{
+    id:1,
+    descricao:'teste'
+  }])
   const [modo, setModo] = useState('normal')
 
+  const ehModoNoturno = modo === 'noturno'
+
   const adicionarAtividade = () => {
+    if(!descricao) return 
     const novaAtividade = {
       id: uuidv4(),
       descricao: descricao
@@ -36,7 +42,7 @@ function App() {
 
 
   return (
-    <div className='appContainer'>
+    <div className={`appContainer ${ehModoNoturno && 'appContainerNoturno'}`}>
 
       <h1>Cadastro de atividades</h1>
 
@@ -48,14 +54,18 @@ function App() {
 
       <label htmlFor="descricao">Descrição:</label>
       <AppInput
+        ehModoNoturno={ehModoNoturno}
         value={descricao}
         onChange={(event) => setDescricao(event.target.value)}
         type="text" />
-      <AppButton onClick={adicionarAtividade}>Cadastrar</AppButton>
+      <AppButton 
+          ehModoNoturno={ehModoNoturno}
+          onClick={adicionarAtividade}>Cadastrar</AppButton>
 
       <div className='cardContainer'>
         {atividades.map(atividade => {
           return <AppCard
+            ehModoNoturno={ehModoNoturno}
             onClickFechar={removeAtividade}
             key={atividade.id}
             atividade={atividade} />
