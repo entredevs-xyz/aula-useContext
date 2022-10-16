@@ -9,7 +9,7 @@ const AppSelect = (props) => {
     return <select
         className={`appSelect ${ehModoNoturno && 'appSelectNoturno'} `}>
         {[padrao, ...opcoes].map(opcao => {
-            return <option >{opcao.descricao}</option>
+            return <option key={opcao.descricao}>{opcao.descricao}</option>
         })}
     </select>
 

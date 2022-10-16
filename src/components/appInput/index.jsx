@@ -3,9 +3,9 @@ import './style.css';
 
 const AppInput = (props) => {
 
-    const { ehModoNoturno } = props
+    const { ehModoNoturno, outrasPropriedades } = props
 
-    return <input className={`appInput ${ehModoNoturno && 'appInputNoturno'}`} {...props}/>
+    return <input className={`appInput ${ehModoNoturno && 'appInputNoturno'}`} {...outrasPropriedades}/>
 }
 
 
