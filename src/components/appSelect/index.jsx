@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextoModoNoturno } from '../../contextos/contextoModoNoturno'
 import './style.css'
 
 const AppSelect = (props) => {
 
-    const { opcoes = [], ehModoNoturno } = props
+    const { ehModoNoturno } = useContext(ContextoModoNoturno)
+    const { opcoes = [] } = props
     const padrao = { descricao: '--' }
 
     return <select

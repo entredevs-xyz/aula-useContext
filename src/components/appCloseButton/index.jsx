@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextoModoNoturno } from '../../contextos/contextoModoNoturno'
 import './style.css'
 
 const AppCloseButton = (props) => {
 
-    const { onClickFechar, ehModoNoturno } = props
+    const { ehModoNoturno } = useContext(ContextoModoNoturno)
+    const { onClickFechar } = props
 
     return <button
         className={`appCloseButton ${ehModoNoturno && 'appCloseButtonNoturno'}`}

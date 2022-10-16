@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import AppButton from './components/appButton';
 import AppInput from './components/appInput';
 import AppCard from './components/appCard';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css'
+import { ContextoModoNoturno } from './contextos/contextoModoNoturno';
 
 function App() {
 
@@ -12,8 +13,11 @@ function App() {
     id:0,
     descricao:'teste'
   }])
-  const [modo, setModo] = useState('normal')
-  const ehModoNoturno = modo === 'noturno'
+
+
+  const { ehModoNoturno, trocarModo } = useContext(ContextoModoNoturno)
+
+
 
   const adicionarAtividade = () => {
     if(!descricao) return 
@@ -35,10 +39,6 @@ function App() {
 
   }
 
-  const trocarModo = () => {
-    setModo(modoAtual => modoAtual === 'normal' ? 'noturno' : 'normal')
-  }
-
 
   return (
     <div className={`appContainer ${ehModoNoturno && 'appContainerNoturno'}`}>
@@ -48,23 +48,22 @@ function App() {
       <button
         onClick={trocarModo}
         className='modoNoturno'>
-        {modo === 'normal' ? '🌞' : '🌛'}
+        {ehModoNoturno ? '🌛' : '🌞'}
       </button>
 
       <label htmlFor="descricao">Descrição:</label>
+
       <AppInput
-        ehModoNoturno={ehModoNoturno}
         value={descricao}
         onChange={(event) => setDescricao(event?.target?.value ?? '')}
         type="text" />
+
       <AppButton 
-          ehModoNoturno={ehModoNoturno}
           onClick={adicionarAtividade}>Cadastrar</AppButton>
 
       <div className='cardContainer'>
         {atividades.map(atividade => {
           return <AppCard
-            ehModoNoturno={ehModoNoturno}
             onClickFechar={removeAtividade}
             key={atividade.id}
             atividade={atividade} />

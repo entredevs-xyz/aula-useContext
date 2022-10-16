@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextoModoNoturno } from '../../contextos/contextoModoNoturno'
 import AppCloseButton from '../appCloseButton'
 import AppSelect from '../appSelect'
 import './style.css'
 
 const AppCard = (props) => {
 
-    const { atividade, onClickFechar, ehModoNoturno } = props
+    const { ehModoNoturno } = useContext(ContextoModoNoturno)
+    const { atividade, onClickFechar } = props
 
     return <div className={`appCard ${ehModoNoturno && 'appCardNoturno'}`}>
         
